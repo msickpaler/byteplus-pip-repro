@@ -1,5 +1,9 @@
 const local = require('./local.config.json');
 
+if (!local.video?.videoId || !local.video?.url) {
+  throw new Error('Set video.videoId and video.url in local.config.json.');
+}
+
 module.exports = {
   name: 'BytePlusRepro',
   slug: 'byteplus-pip-repro',
@@ -12,6 +16,7 @@ module.exports = {
     infoPlist: {
       UIBackgroundModes: ['audio'],
       BYTEPLUS_APP_ID: local.appId,
+      BYTEPLUS_VIDEO: local.video,
       ITSAppUsesNonExemptEncryption: false,
     },
   },

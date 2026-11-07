@@ -1,4 +1,9 @@
 {
   "bundleIdentifier": "com.example.byteplusrepro",
-  "appId": "YOUR_BYTEPLUS_APP_ID"
+  "appId": "YOUR_BYTEPLUS_APP_ID",
+  "video": {
+    "videoId": "YOUR_BYTEPLUS_VOD_VIDEO_ID",
+    "url": "https://YOUR_BYTEPLUS_VOD_PLAYBACK_URL",
+    "auth": "YOUR_ENCRYPTED_DECRYPTION_KEY_OR_EMPTY_STRING"
+  }
 }

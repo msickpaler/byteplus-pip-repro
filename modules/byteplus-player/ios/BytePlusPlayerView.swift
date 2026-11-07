@@ -1,4 +1,5 @@
 import AVFoundation
+import CryptoKit
 import ExpoModulesCore
 import TTSDKFramework
 import UIKit
@@ -43,10 +44,18 @@ final class BytePlusPlayerView: ExpoView, TTVideoEngineDelegate {
       button.heightAnchor.constraint(equalToConstant: 56),
     ])
 
+    guard let video = Bundle.main.object(forInfoDictionaryKey: "BYTEPLUS_VIDEO") as? [String: String],
+          let videoId = video["videoId"], let url = video["url"] else {
+      fatalError("Set video.videoId and video.url in local.config.json before building.")
+    }
+    if let auth = video["auth"], !auth.isEmpty {
+      engine.setOptionForKey(VEKKey.VEKKeyDecryptEncryptedDecryptionKey_NSString.rawValue,
+                            value: auth)
+    }
+    let cacheKey = Insecure.MD5.hash(data: Data(url.utf8))
+      .map { String(format: "%02hhx", $0) }.joined()
     engine.setVideoEngineVideoSource(TTVideoEngineUrlSource(
-      url: "https://media.w3.org/2010/05/bunny/trailer.mp4",
-      cacheKey: "big-buck-bunny-trailer",
-      videoId: "big-buck-bunny-trailer"
+      url: url, cacheKey: cacheKey, videoId: videoId
     ))
   }
 
