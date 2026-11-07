@@ -6,7 +6,7 @@ Pod::Spec.new do |s|
   s.license = { :type => 'UNLICENSED' }
   s.author = 'Reproduction app'
   s.homepage = 'https://docs.byteplus.com/en/docs/byteplus-vod/docs-ios-player-picture-in-picture'
-  s.source = { :git => 'https://github.com/byteplus-sdk/VideoOneSolutions.git' }
+  s.source = { :git => 'https://github.com/msickpaler/byteplus-pip-repro.git' }
   s.platform = :ios, '16.4'
   s.swift_version = '5.9'
   s.static_framework = true
