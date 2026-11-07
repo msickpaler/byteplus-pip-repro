@@ -10,7 +10,6 @@ public class BytePlusAppDelegate: ExpoAppDelegateSubscriber {
           Bundle.main.url(forResource: "license", withExtension: "lic") != nil else {
       fatalError("Set local.config.json and add license.lic before building.")
     }
-    TTVideoEngine.setLogFlag(.all)
     let configuration = TTSDKConfiguration.defaultConfiguration(
       withAppID: appId,
       licenseName: "license.lic"

@@ -4,10 +4,9 @@ import ExpoModulesCore
 import TTSDKFramework
 import UIKit
 
-final class BytePlusPlayerView: ExpoView, TTVideoEngineDelegate {
+final class BytePlusPlayerView: ExpoView {
   private let engine = TTVideoEngine(ownPlayer: true)
   private let button = UIButton(type: .system)
-  private var hasStarted = false
 
   required init(appContext: AppContext? = nil) {
     super.init(appContext: appContext)
@@ -19,7 +18,6 @@ final class BytePlusPlayerView: ExpoView, TTVideoEngineDelegate {
       NSLog("[BytePlusRepro] Audio session: %@", String(describing: error))
     }
 
-    engine.delegate = self
     engine.enablePictureInPicture = TTVideoEngine.isPictureInPictureSupported()
     engine.canStartPictureInPictureAutomaticallyFromInline = true
     engine.setOptionForKey(VEKKey.VEKKeyViewScaleMode_ENUM.rawValue,
@@ -29,7 +27,7 @@ final class BytePlusPlayerView: ExpoView, TTVideoEngineDelegate {
     videoView.translatesAutoresizingMaskIntoConstraints = false
     addSubview(videoView)
     button.translatesAutoresizingMaskIntoConstraints = false
-    button.setTitle("Play", for: .normal)
+    button.setTitle("Play / Pause", for: .normal)
     button.setTitleColor(.white, for: .normal)
     button.backgroundColor = UIColor.black.withAlphaComponent(0.6)
     button.layer.cornerRadius = 24
@@ -42,7 +40,7 @@ final class BytePlusPlayerView: ExpoView, TTVideoEngineDelegate {
       videoView.bottomAnchor.constraint(equalTo: bottomAnchor),
       button.centerXAnchor.constraint(equalTo: centerXAnchor),
       button.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor, constant: -16),
-      button.widthAnchor.constraint(equalToConstant: 96),
+      button.widthAnchor.constraint(equalToConstant: 132),
       button.heightAnchor.constraint(equalToConstant: 48),
     ])
 
@@ -61,18 +59,6 @@ final class BytePlusPlayerView: ExpoView, TTVideoEngineDelegate {
     ))
   }
 
-  override func layoutSubviews() {
-    super.layoutSubviews()
-    guard window != nil, bounds.width > 0, bounds.height > 0, !hasStarted else { return }
-    hasStarted = true
-    engine.play()
-  }
-
-  override func didMoveToWindow() {
-    super.didMoveToWindow()
-    if window != nil { setNeedsLayout() }
-  }
-
   @objc private func togglePlayback() {
     switch engine.playbackState {
     case .playing: engine.pause()
@@ -80,24 +66,7 @@ final class BytePlusPlayerView: ExpoView, TTVideoEngineDelegate {
     }
   }
 
-  func videoEngine(_ videoEngine: TTVideoEngine,
-                   playbackStateDidChanged state: TTVideoEnginePlaybackState) {
-    DispatchQueue.main.async { [weak self] in
-      self?.button.setTitle(state == .playing ? "Pause" : "Play", for: .normal)
-    }
-  }
-
-  func videoEngineDidFinish(_ videoEngine: TTVideoEngine, error: Error?) {
-    if let error { NSLog("[BytePlusRepro] Playback: %@", String(describing: error)) }
-  }
-  func videoEngineDidFinish(_ videoEngine: TTVideoEngine, videoStatusException status: Int) {
-    NSLog("[BytePlusRepro] Finished: %ld", status)
-  }
-  func videoEngineUserStopped(_ videoEngine: TTVideoEngine) {}
-  func videoEngineCloseAysncFinish(_ videoEngine: TTVideoEngine) {}
-
   deinit {
-    engine.delegate = nil
     engine.stopPictureInPicture()
     engine.closeAysnc()
   }

@@ -1,6 +1,6 @@
 # BytePlus Picture-in-Picture reproduction
 
-One React Native screen, one BytePlus VOD video, and one native play/pause button. Uses TTVideoEngine's built-in Picture-in-Picture with `ownPlayer: true`. No custom restoration delegates, AVPlayer, sample-buffer layer, navigation, sign-in flow, or analytics.
+One React Native screen, one BytePlus VOD video, and one play/pause button over the full-screen player view. Uses TTVideoEngine's built-in Picture-in-Picture with `ownPlayer: true`. Playback starts only when the button is pressed. No player delegates, custom restoration logic, layout/lifecycle playback handlers, AVPlayer, sample-buffer layer, navigation, sign-in flow, or analytics.
 
 Requires a physical iPhone, Xcode, CocoaPods, and Node (see `.node-version`). The SDK used here does not support the simulator. Expo Go cannot load this native module.
 
@@ -19,6 +19,6 @@ Obtain these values using your own backend or BytePlus setup. This sample contai
 
 ## Reproduce
 
-Enable **Settings > General > Picture in Picture > Start PiP Automatically** on the iPhone. The app starts playing the configured VOD video when opened. Go to the iPhone Home Screen, then use the system Picture-in-Picture restore button to return. Repeat after pausing in Picture-in-Picture. Observe whether the video briefly changes scale or goes black during restoration.
+Enable **Settings > General > Picture in Picture > Start PiP Automatically** on the iPhone. Open the app and press **Play / Pause** to start the configured VOD video. Go to the iPhone Home Screen, then use the system Picture-in-Picture restore button to return. Repeat after pausing in Picture-in-Picture. Observe whether the video briefly changes scale or goes black during restoration. The app's button label is fixed; each press toggles the SDK's current playback state.
 
 SDK: `TTSDKFramework/Player 1.52.100.4-standard`. Integration reference: https://docs.byteplus.com/en/docs/byteplus-vod/docs-ios-player-picture-in-picture
