@@ -1,0 +1,11 @@
+node_modules/
+.expo/
+/ios/
+/android/
+dist/
+build/
+artifacts/
+local.config.json
+*.lic
+*.log
+.DS_Store
