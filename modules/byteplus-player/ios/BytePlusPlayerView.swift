@@ -31,17 +31,19 @@ final class BytePlusPlayerView: ExpoView, TTVideoEngineDelegate {
     button.translatesAutoresizingMaskIntoConstraints = false
     button.setTitle("Play", for: .normal)
     button.setTitleColor(.white, for: .normal)
+    button.backgroundColor = UIColor.black.withAlphaComponent(0.6)
+    button.layer.cornerRadius = 24
     button.addTarget(self, action: #selector(togglePlayback), for: .touchUpInside)
     addSubview(button)
     NSLayoutConstraint.activate([
-      videoView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor),
+      videoView.topAnchor.constraint(equalTo: topAnchor),
       videoView.leadingAnchor.constraint(equalTo: leadingAnchor),
       videoView.trailingAnchor.constraint(equalTo: trailingAnchor),
-      videoView.bottomAnchor.constraint(equalTo: button.topAnchor),
-      button.leadingAnchor.constraint(equalTo: leadingAnchor),
-      button.trailingAnchor.constraint(equalTo: trailingAnchor),
-      button.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor),
-      button.heightAnchor.constraint(equalToConstant: 56),
+      videoView.bottomAnchor.constraint(equalTo: bottomAnchor),
+      button.centerXAnchor.constraint(equalTo: centerXAnchor),
+      button.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor, constant: -16),
+      button.widthAnchor.constraint(equalToConstant: 96),
+      button.heightAnchor.constraint(equalToConstant: 48),
     ])
 
     guard let video = Bundle.main.object(forInfoDictionaryKey: "BYTEPLUS_VIDEO") as? [String: String],
