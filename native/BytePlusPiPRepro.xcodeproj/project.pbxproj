@@ -1,0 +1,343 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		577ABA1304ADD1BDB25690EC /* libPods-BytePlusPiPRepro.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C45FBC4FF81E9B53988E1021 /* libPods-BytePlusPiPRepro.a */; };
+		8A0000000000000000000021 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A0000000000000000000011 /* AppDelegate.swift */; };
+		8A0000000000000000000022 /* PlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A0000000000000000000012 /* PlayerViewController.swift */; };
+		8A0000000000000000000023 /* license.lic in Resources */ = {isa = PBXBuildFile; fileRef = 8A0000000000000000000014 /* license.lic */; };
+		8A0000000000000000000024 /* ReproConfig.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8A0000000000000000000015 /* ReproConfig.plist */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		51418798A135489D43DBBEC1 /* Pods-BytePlusPiPRepro.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BytePlusPiPRepro.release.xcconfig"; path = "Target Support Files/Pods-BytePlusPiPRepro/Pods-BytePlusPiPRepro.release.xcconfig"; sourceTree = "<group>"; };
+		8A0000000000000000000010 /* BytePlusPiPRepro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BytePlusPiPRepro.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8A0000000000000000000011 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		8A0000000000000000000012 /* PlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerViewController.swift; sourceTree = "<group>"; };
+		8A0000000000000000000013 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8A0000000000000000000014 /* license.lic */ = {isa = PBXFileReference; lastKnownFileType = file; path = license.lic; sourceTree = "<group>"; };
+		8A0000000000000000000015 /* ReproConfig.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = ReproConfig.plist; sourceTree = "<group>"; };
+		8A0000000000000000000016 /* Project.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Project.xcconfig; sourceTree = "<group>"; };
+		C45FBC4FF81E9B53988E1021 /* libPods-BytePlusPiPRepro.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BytePlusPiPRepro.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E6709AA61A3F26DB81A7104B /* Pods-BytePlusPiPRepro.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BytePlusPiPRepro.debug.xcconfig"; path = "Target Support Files/Pods-BytePlusPiPRepro/Pods-BytePlusPiPRepro.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8A0000000000000000000032 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				577ABA1304ADD1BDB25690EC /* libPods-BytePlusPiPRepro.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0C18A04507A4EDFCCF080148 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C45FBC4FF81E9B53988E1021 /* libPods-BytePlusPiPRepro.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		2AFF638E6F40FFAF7F40C527 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E6709AA61A3F26DB81A7104B /* Pods-BytePlusPiPRepro.debug.xcconfig */,
+				51418798A135489D43DBBEC1 /* Pods-BytePlusPiPRepro.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		8A0000000000000000000002 = {
+			isa = PBXGroup;
+			children = (
+				8A0000000000000000000004 /* BytePlusPiPRepro */,
+				8A0000000000000000000005 /* Config */,
+				8A0000000000000000000003 /* Products */,
+				2AFF638E6F40FFAF7F40C527 /* Pods */,
+				0C18A04507A4EDFCCF080148 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		8A0000000000000000000003 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8A0000000000000000000010 /* BytePlusPiPRepro.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8A0000000000000000000004 /* BytePlusPiPRepro */ = {
+			isa = PBXGroup;
+			children = (
+				8A0000000000000000000011 /* AppDelegate.swift */,
+				8A0000000000000000000012 /* PlayerViewController.swift */,
+				8A0000000000000000000013 /* Info.plist */,
+				8A0000000000000000000014 /* license.lic */,
+				8A0000000000000000000015 /* ReproConfig.plist */,
+			);
+			path = BytePlusPiPRepro;
+			sourceTree = "<group>";
+		};
+		8A0000000000000000000005 /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				8A0000000000000000000016 /* Project.xcconfig */,
+			);
+			path = Config;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8A0000000000000000000040 /* BytePlusPiPRepro */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8A0000000000000000000041 /* Build configuration list for PBXNativeTarget "BytePlusPiPRepro" */;
+			buildPhases = (
+				85A846F7633721C807C49A42 /* [CP] Check Pods Manifest.lock */,
+				8A0000000000000000000031 /* Sources */,
+				8A0000000000000000000032 /* Frameworks */,
+				8A0000000000000000000033 /* Resources */,
+				1E8563D14E50128061AC9D80 /* [CP] Embed Pods Frameworks */,
+				6B69BB1F6142C56B85E1DE3C /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BytePlusPiPRepro;
+			productName = BytePlusPiPRepro;
+			productReference = 8A0000000000000000000010 /* BytePlusPiPRepro.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8A0000000000000000000001 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 2600;
+				LastUpgradeCheck = 2600;
+				TargetAttributes = {
+					8A0000000000000000000040 = {
+						CreatedOnToolsVersion = 26.0;
+					};
+				};
+			};
+			buildConfigurationList = 8A0000000000000000000044 /* Build configuration list for PBXProject "BytePlusPiPRepro" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 8A0000000000000000000002;
+			productRefGroup = 8A0000000000000000000003 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8A0000000000000000000040 /* BytePlusPiPRepro */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8A0000000000000000000033 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8A0000000000000000000023 /* license.lic in Resources */,
+				8A0000000000000000000024 /* ReproConfig.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1E8563D14E50128061AC9D80 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BytePlusPiPRepro/Pods-BytePlusPiPRepro-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BytePlusPiPRepro/Pods-BytePlusPiPRepro-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BytePlusPiPRepro/Pods-BytePlusPiPRepro-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6B69BB1F6142C56B85E1DE3C /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BytePlusPiPRepro/Pods-BytePlusPiPRepro-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BytePlusPiPRepro/Pods-BytePlusPiPRepro-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BytePlusPiPRepro/Pods-BytePlusPiPRepro-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		85A846F7633721C807C49A42 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BytePlusPiPRepro-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8A0000000000000000000031 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8A0000000000000000000021 /* AppDelegate.swift in Sources */,
+				8A0000000000000000000022 /* PlayerViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		8A0000000000000000000042 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E6709AA61A3F26DB81A7104B /* Pods-BytePlusPiPRepro.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				INFOPLIST_FILE = BytePlusPiPRepro/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		8A0000000000000000000043 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 51418798A135489D43DBBEC1 /* Pods-BytePlusPiPRepro.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				INFOPLIST_FILE = BytePlusPiPRepro/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		8A0000000000000000000045 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8A0000000000000000000016 /* Project.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		8A0000000000000000000046 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8A0000000000000000000016 /* Project.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8A0000000000000000000041 /* Build configuration list for PBXNativeTarget "BytePlusPiPRepro" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8A0000000000000000000042 /* Debug */,
+				8A0000000000000000000043 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8A0000000000000000000044 /* Build configuration list for PBXProject "BytePlusPiPRepro" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8A0000000000000000000045 /* Debug */,
+				8A0000000000000000000046 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 8A0000000000000000000001 /* Project object */;
+}

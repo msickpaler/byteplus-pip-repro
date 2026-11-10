@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>appId</key>
+	<string>YOUR_BYTEPLUS_APP_ID</string>
+	<key>video</key>
+	<dict>
+		<key>videoId</key>
+		<string>YOUR_BYTEPLUS_VOD_VIDEO_ID</string>
+		<key>url</key>
+		<string>https://YOUR_BYTEPLUS_VOD_PLAYBACK_URL</string>
+		<key>auth</key>
+		<string></string>
+	</dict>
+</dict>
+</plist>

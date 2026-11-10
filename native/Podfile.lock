@@ -1,0 +1,49 @@
+PODS:
+  - RangersAppLog/Core (6.16.8-bp):
+    - RangersAppLog/Encryptor/VOLC
+  - RangersAppLog/Encryptor/VOLC (6.16.8-bp)
+  - RangersAppLog/Host/SG (6.16.8-bp):
+    - RangersAppLog/Core
+  - TTSDKFramework/Core (1.52.100.4-standard):
+    - RangersAppLog/Core (~> 6.16.8-bp)
+    - RangersAppLog/Host/SG (~> 6.16.8-bp)
+  - TTSDKFramework/Player (1.52.100.4-standard):
+    - TTSDKFramework/Core
+    - TTSDKFramework/PlayerCore/Normal
+    - TTSDKFramework/Reachability
+    - TTSDKFramework/TopSignature
+    - TTSDKFramework/VCN
+    - TTSDKFramework/VolcLog
+  - TTSDKFramework/PlayerCore/Base (1.52.100.4-standard):
+    - TTSDKFramework/Core
+  - TTSDKFramework/PlayerCore/Normal (1.52.100.4-standard):
+    - TTSDKFramework/PlayerCore/Base
+    - TTSDKFramework/Tools
+    - TTSDKFramework/TTFFmpeg/Normal
+    - TTSDKFramework/VideoProcessor
+  - TTSDKFramework/Reachability (1.52.100.4-standard)
+  - TTSDKFramework/SSL (1.52.100.4-standard)
+  - TTSDKFramework/Tools (1.52.100.4-standard):
+    - TTSDKFramework/SSL
+  - TTSDKFramework/TopSignature (1.52.100.4-standard)
+  - TTSDKFramework/TTFFmpeg/Normal (1.52.100.4-standard):
+    - TTSDKFramework/Tools
+  - TTSDKFramework/VCN (1.52.100.4-standard)
+  - TTSDKFramework/VideoProcessor (1.52.100.4-standard)
+  - TTSDKFramework/VolcLog (1.52.100.4-standard)
+
+DEPENDENCIES:
+  - TTSDKFramework/Player (= 1.52.100.4-standard)
+
+SPEC REPOS:
+  https://github.com/byteplus-sdk/byteplus-specs.git:
+    - RangersAppLog
+    - TTSDKFramework
+
+SPEC CHECKSUMS:
+  RangersAppLog: b9531c46792106bf084e4a4a63fdb751edadf79d
+  TTSDKFramework: c86292ea61e7f0c020d40f3efc0b81e4b1422620
+
+PODFILE CHECKSUM: 22a1b80f2e11071ed1e15f4d9762ccb4e17385d9
+
+COCOAPODS: 1.16.2

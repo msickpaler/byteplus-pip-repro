@@ -1,0 +1,6 @@
+// Use a bundle identifier supported by your BytePlus license.
+PRODUCT_BUNDLE_IDENTIFIER = com.example.byteplusrepro
+DEVELOPMENT_TEAM =
+
+// Optional, ignored by Git: override the values above locally.
+#include? "Local.xcconfig"

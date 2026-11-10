@@ -1,5 +1,25 @@
 # BytePlus Picture-in-Picture reproduction
 
+This repository contains two versions of the same minimal player:
+
+- `native/`: a complete Swift/UIKit Xcode project with no React Native. Start here.
+- The repository root: the same player inside a React Native/Expo app, matching our production environment.
+
+## Native Xcode project (`native/`)
+
+A single `UIViewController` with a full-screen `TTVideoEngine(ownPlayer: true).playerView` and a play/pause button. The player code is identical to the React Native version.
+
+Requires a physical iPhone, Xcode, and CocoaPods.
+
+1. Put your BytePlus license at `native/BytePlusPiPRepro/license.lic`.
+2. Copy `native/ReproConfig.example.plist` to `native/BytePlusPiPRepro/ReproConfig.plist` and set your app ID and VOD playback information (see "VOD source" below).
+3. Set the bundle identifier supported by your license and your signing team in `native/Config/Project.xcconfig`, or in Xcode under Signing & Capabilities.
+4. Run `pod install` in `native/`, open `native/BytePlusPiPRepro.xcworkspace`, and run the `BytePlusPiPRepro` scheme on the iPhone.
+
+The steps in "Reproduce" below apply to both versions.
+
+## React Native/Expo version (repository root)
+
 One React Native screen, one BytePlus VOD video, and one play/pause button over the full-screen player view. Uses TTVideoEngine's built-in Picture-in-Picture with `ownPlayer: true`. Playback starts only when the button is pressed. No player delegates, custom restoration logic, layout/lifecycle playback handlers, AVPlayer, sample-buffer layer, navigation, sign-in flow, or analytics.
 
 Requires a physical iPhone, Xcode, CocoaPods, and Node (see `.node-version`). The SDK used here does not support the simulator. Expo Go cannot load this native module.
