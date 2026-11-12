@@ -13,3 +13,5 @@ native/Pods/
 native/BytePlusPiPRepro/ReproConfig.plist
 native/Config/Local.xcconfig
 xcuserdata/
+.gradle/
+local.properties

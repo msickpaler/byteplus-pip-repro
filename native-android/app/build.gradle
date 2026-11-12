@@ -1,0 +1,46 @@
+plugins { id 'com.android.application' }
+
+def configFile = rootProject.file('../local.config.json')
+def licenseFile = rootProject.file('../license.lic')
+if (!configFile.exists() || !licenseFile.exists()) {
+    throw new GradleException('Add local.config.json and license.lic to the repository root; see README.')
+}
+def config = new groovy.json.JsonSlurper().parse(configFile)
+if (!config.androidPackageName || !config.appId || !config.appName || !config.video?.videoId || !config.video?.url?.startsWith('https://')) {
+    throw new GradleException('Set androidPackageName, appId, appName and video (videoId, HTTPS url) in local.config.json.')
+}
+
+android {
+    namespace 'com.example.byteplusrepro'
+    compileSdk 36
+    defaultConfig {
+        applicationId config.androidPackageName
+        minSdk 26
+        targetSdk 36
+        versionCode 1
+        versionName '1.0.0'
+        ndk { abiFilters 'arm64-v8a', 'armeabi-v7a' }
+        testInstrumentationRunner 'androidx.test.runner.AndroidJUnitRunner'
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+    sourceSets.main.assets.srcDir layout.buildDirectory.dir('repro-assets')
+}
+
+tasks.register('copyReproAssets', Copy) {
+    from(configFile)
+    from(licenseFile)
+    into layout.buildDirectory.dir('repro-assets')
+}
+tasks.named('preBuild').configure { dependsOn 'copyReproAssets' }
+
+dependencies {
+    // 本体と同じバージョンでPiP単独の挙動を比較する。
+    implementation 'com.bytedanceapi:ttsdk-player_standard:1.48.200.1'
+    implementation 'com.squareup.okhttp3:okhttp:4.12.0'
+    androidTestImplementation 'androidx.test:runner:1.6.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.2.1'
+    androidTestImplementation 'androidx.test.uiautomator:uiautomator:2.3.0'
+}

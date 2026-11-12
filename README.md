@@ -1,8 +1,9 @@
 # BytePlus Picture-in-Picture reproduction
 
-This repository contains two versions of the same minimal player:
+This repository contains three versions of the same minimal player:
 
 - `native/`: a complete Swift/UIKit Xcode project with no React Native. Start here.
+- `native-android/`: a single Android Activity with BytePlus and system PiP, without React Native. See [Android setup](native-android/README.md).
 - The repository root: the same player inside a React Native/Expo app, matching our production environment.
 
 ## Native Xcode project (`native/`)

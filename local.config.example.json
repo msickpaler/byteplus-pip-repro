@@ -5,5 +5,7 @@
     "videoId": "YOUR_BYTEPLUS_VOD_VIDEO_ID",
     "url": "https://YOUR_BYTEPLUS_VOD_PLAYBACK_URL",
     "auth": "YOUR_ENCRYPTED_DECRYPTION_KEY_OR_EMPTY_STRING"
-  }
+  },
+  "androidPackageName": "com.example.byteplusrepro",
+  "appName": "YOUR_BYTEPLUS_APP_NAME"
 }
